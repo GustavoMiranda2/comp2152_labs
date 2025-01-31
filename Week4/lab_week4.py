@@ -81,8 +81,11 @@ loot_options = ["Health Potion", "Poison Potion", "Secret Note", "Leather Boots"
 good_loot_options = ["Health Potion", "Leather Boots"]
 bad_loot_options = ["Poison Potion"]
 
+
 # Lab04 - Q4
 belt = []
+
+
 
 # Lab04 - Q1
 # Define the Monster Power
@@ -124,6 +127,8 @@ while i in range(5):
 combat_strength = int(combat_strength)
 m_combat_strength = int(m_combat_strength)
 
+
+
 # Roll for weapon
 input("Roll the dice for your weapon (Press enter)")
 weaponRoll = random.choice(diceOptions)
@@ -155,6 +160,26 @@ input("Roll the dice for the monster's health points (Press enter)")
 m_health_points = random.choice(diceOptions)
 print("Player rolled " + str(m_health_points) + " health points for the monster")
 
+
+# Lab 04 - Q5 Item 1
+print("You find a loot bag! Look inside to find 2 items.")
+input("Roll for the first item (Press Enter)")
+lootRoll = random.choice(range(1, len(loot_options) + 1))
+loot = loot_options.pop(lootRoll - 1 )
+belt.append(loot)
+print("Your belt: ", belt)
+
+
+
+# Lab 04 - Q6 - item 2
+input("Roll for the secondd item (Press Enter)")
+lootRoll = random.choice(range(1, len(loot_options) + 1))
+loot = loot_options.pop(lootRoll - 1 )
+belt.append(loot)
+print("Your belt: ", belt)
+
+
+
 input("Analyze the roll (Press enter)")
 # Compare Player vs Monster's strength
 print("--- You are matched in strength: " + str(combat_strength == m_combat_strength))
@@ -164,11 +189,13 @@ print("--- You have a strong player: " + str((combat_strength + health_points) >
 
 # Lab 04 - Q2
 # Roll for the Monster's Power
+
 input("Roll for the Monster's Magic Power (Press Enter)")
 power_roll = random.choice(["Fire Magic", "Freezing Time", "Super Hearing"])
 
 # Lab 04 - Q3
 # Increase the Monster Combat Strength by it's Power
+
 m_combat_strength = min(6, m_combat_strength + monster_power[power_roll])
 print("The Monster Combat Strength is no "+ str(combat_strength) + "Using the " + power_roll + " magic power.")
 # github.com/sojoudian
