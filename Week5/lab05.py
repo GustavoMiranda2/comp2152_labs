@@ -172,13 +172,15 @@ if not input_invalid:
     # Lab 5: Call Recursive function
     print("    |", end="    ")
     num_dream_lvls = input("How many dream levels do you want to go down?")
+    num_dream_lvls = int(num_dream_lvls)
     if  num_dream_lvls !=0:
         health_points -= 1
         crazy_level = functions_lab05.inception_dream(num_dream_lvls)
         combat_strength += crazy_level
         print("combat strength: " + str(combat_strength))
         print("health points: " + str(health_points))
-
+    else:
+        print("Invalid input.")
     # Fight Sequence
     # Loop while the monster and the player are alive. Call fight sequence functions
     print("    ------------------------------------------------------------------")
