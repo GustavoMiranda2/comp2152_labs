@@ -23,6 +23,8 @@ monster_powers = {
     "Super Hearing": 6
 }
 
+# Define the Monster's Powers
+
 # Define the number of stars to award the player
 num_stars = 0
 
