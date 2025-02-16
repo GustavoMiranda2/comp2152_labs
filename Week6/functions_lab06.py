@@ -174,3 +174,7 @@ def adjust_combat_strength(comat_strength, m_comat_strength):
             print("    |     Increasing Hero's Combat Strength!")
         else:
             print("     |    Last game had no effect on Hero/Monster Combat Strength!")
+
+
+
+            
